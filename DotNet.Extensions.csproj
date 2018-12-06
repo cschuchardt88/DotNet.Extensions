@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{295209AE-FF2B-4099-B21D-04866A22C8CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet.Extensions</RootNamespace>
+    <AssemblyName>DotNet.Extensions</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Binding\ClassBindingMap.cs" />
+    <Compile Include="System\Binding\System.Object.Binding.cs" />
+    <Compile Include="System\Collections\BitArray.cs" />
+    <Compile Include="System\Collections\IEnumerable.cs" />
+    <Compile Include="System\Collections\Specialized\NameValueCollection.cs" />
+    <Compile Include="System\Collection\Generic\IDictionary.cs" />
+    <Compile Include="System\Collection\Generic\IEnumerable.cs" />
+    <Compile Include="System\Dynamic\DynamicExtensions.cs" />
+    <Compile Include="System\ErrorExceptionHandlingExtension.cs" />
+    <Compile Include="System\GenericType.cs" />
+    <Compile Include="System\IO\Algorithm\crc32.cs" />
+    <Compile Include="System\IO\Compression\DeflateExtension.cs" />
+    <Compile Include="System\IO\Compression\GZipExtension.cs" />
+    <Compile Include="System\IO\FileExtension.cs" />
+    <Compile Include="System\IO\StreamExternsion.cs" />
+    <Compile Include="System\Linq\IEnumerable.cs" />
+    <Compile Include="System\Numbers\NumbersExtension.cs" />
+    <Compile Include="System\ObjectExtensions.cs" />
+    <Compile Include="System\Resources\ResourceExtractor.cs" />
+    <Compile Include="System\Runtime\InteropServices\MarshalExtensions.cs" />
+    <Compile Include="System\System.ByteArray.cs" />
+    <Compile Include="System\System.Char.cs" />
+    <Compile Include="System\System.Convert.cs" />
+    <Compile Include="System\System.double.cs" />
+    <Compile Include="System\System.Format.cs" />
+    <Compile Include="System\System.long.cs" />
+    <Compile Include="System\System.Object.cs" />
+    <Compile Include="System\System.Oject.Operators.cs" />
+    <Compile Include="System\System.String.cs" />
+    <Compile Include="System\System.String.Parse.cs" />
+    <Compile Include="System\System.Type.cs" />
+    <Compile Include="System\Windows\Forms\UserControl.cs" />
+    <Compile Include="System\Xml\Serialization\SerializableDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Drawing\" />
+    <Folder Include="System\Reflection\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
