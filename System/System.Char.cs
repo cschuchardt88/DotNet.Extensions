@@ -31,16 +31,11 @@ namespace System
         {
             if (String.IsNullOrEmpty(strValue)) return String.Empty;
             if (CharIndex < 0) return String.Empty;
-            if (SetChar.CompareTo(Char.MinValue) < 0) return String.Empty;
-            if (SetChar.CompareTo(Char.MaxValue) > 0) return String.Empty;
+            if (CharIndex > strValue.Length) return String.Empty;
 
             char[] SomeStupidArray = strValue.ToCharArray(); // Memory leak
 
-            if (CharIndex > SomeStupidArray.Count()) return String.Empty;
-
             SomeStupidArray[CharIndex] = SetChar;
-
-            SomethingStupidArray = null;
 
             return new string(SomeStupidArray);
         }
