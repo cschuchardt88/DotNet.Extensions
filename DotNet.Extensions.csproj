@@ -26,9 +26,18 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <FileAlignment>8192</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DotNet.Extensions.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,9 +89,8 @@
     <Compile Include="System\Xml\Serialization\SerializableDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LICENSE">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="DotNet.Extensions.snk" />
+    <None Include="LICENSE" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
